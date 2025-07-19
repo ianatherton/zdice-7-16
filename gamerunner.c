@@ -2,7 +2,7 @@
 #include "random.h"
 #include <stdio.h>
 
-void Greetings()
+void Greetings()//..................................greet player
 {
     int seconds = random_range(1, 12345);
     int minutes = random_range(1, 1234);
@@ -18,6 +18,18 @@ void reset_game()//..................................zero out game variables
 {
     srand(time(NULL));//.............................seed random from time
 }
+
+
+
+
+
+
+
+
+
+
+
+
 //void input_player_count()
 //{
 //    scanf("Input number of players: %d", &number_of_players);
