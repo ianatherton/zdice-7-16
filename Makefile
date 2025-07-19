@@ -2,7 +2,8 @@ CC = gcc
 CFLAGS = -Wall -Wextra -g
 TARGET = zdice
 SRC = main.c game.c gamerunner.c random.c cup.c players.c
-OBJ = $(SRC:.c=.o)
+BUILD_DIR = obj
+OBJ = $(SRC:%.c=$(BUILD_DIR)/%.o)
 
 # Default target
 all: $(TARGET)
@@ -11,9 +12,13 @@ all: $(TARGET)
 $(TARGET): $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
 
-# Compile source files to object files
-%.o: %.c
+# Compile source files to object files in build directory
+$(BUILD_DIR)/%.o: %.c | $(BUILD_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
+
+# Create build directory if it doesn't exist
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
 
 # Generate dependencies automatically
 depend: $(SRC)
@@ -28,7 +33,8 @@ run: $(TARGET)
 
 # Clean up build artifacts
 clean:
-	rm -f $(TARGET) $(OBJ) .depend *~ core
+	rm -f $(TARGET) .depend *~ core
+	rm -rf $(BUILD_DIR)
 
 # Clean everything and rebuild
 rebuild: clean all
