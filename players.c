@@ -1,5 +1,5 @@
-#include "players.h"
-#include "constants.h"
-#include "game.h"
+#include "include/players.h"
+#include "include/constants.h"
+#include "include/game.h"
 
 //adam_strategy(int )

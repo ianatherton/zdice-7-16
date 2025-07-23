@@ -1,11 +1,10 @@
-#include "constants.h"
-#include "game.h"
+#include "include/constants.h"
+#include "include/game.h"
 #include <stdbool.h>
 #include <stdio.h>
-#include "tests.h"
 
 #ifdef DEBUG
-#include "tests.h"
+#include "include/tests.h"
 #endif
 
 int main()

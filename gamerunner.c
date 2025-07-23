@@ -1,5 +1,5 @@
-#include "game.h"
-#include "random.h"
+#include "include/game.h"
+#include "include/random.h"
 #include <stdio.h>
 
 void Greetings()//..................................greet player

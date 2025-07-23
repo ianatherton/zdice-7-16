@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -g
+CFLAGS = -Wall -Wextra -g -I.
 TARGET = zdice
 SRC = main.c game.c gamerunner.c random.c cup.c players.c
 DEBUG_SRC = main.c game.c gamerunner.c random.c cup.c players.c tests.c

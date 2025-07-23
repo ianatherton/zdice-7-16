@@ -1,4 +1,4 @@
-#include "random.h"
+#include "include/random.h"
 
 int random_range(int min, int max)
 {

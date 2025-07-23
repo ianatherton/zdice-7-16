@@ -1,6 +1,6 @@
-#include "game.h"
-#include "random.h"
-#include "cup.h"
+#include "include/game.h"
+#include "include/random.h"
+#include "include/cup.h"
 
 //int draw_dice_diff()
 //{

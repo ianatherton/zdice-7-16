@@ -1,9 +1,9 @@
-#include "tests.h"
-#include "game.h"
-#include "random.h"
-#include "players.h"
-#include "cup.h"
-#include "constants.h"
+#include "include/tests.h"
+#include "include/game.h"
+#include "include/random.h"
+#include "include/players.h"
+#include "include/cup.h"
+#include "include/constants.h"
 
 void run_tests()
 {
