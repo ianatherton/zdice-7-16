@@ -2,8 +2,10 @@ CC = gcc
 CFLAGS = -Wall -Wextra -g
 TARGET = zdice
 SRC = main.c game.c gamerunner.c random.c cup.c players.c
+DEBUG_SRC = main.c game.c gamerunner.c random.c cup.c players.c tests.c
 BUILD_DIR = obj
 OBJ = $(SRC:%.c=$(BUILD_DIR)/%.o)
+DEBUG_OBJ = $(DEBUG_SRC:%.c=$(BUILD_DIR)/%.o)
 
 # Default target
 all: $(TARGET)
@@ -41,7 +43,9 @@ rebuild: clean all
 
 # Debug build with additional debug symbols
 debug: CFLAGS += -DDEBUG -g3
-debug: clean all
+debug: clean $(BUILD_DIR) $(DEBUG_OBJ)
+	$(CC) $(CFLAGS) -o $(TARGET) $(DEBUG_OBJ)
+	./$(TARGET)
 
 # Release build with optimizations
 release: CFLAGS += -O2 -DNDEBUG
