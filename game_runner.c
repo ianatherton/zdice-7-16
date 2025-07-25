@@ -10,7 +10,7 @@ void Greetings()//..................................greet player
     int days = random_range(1, 12);
     printf(".....mmmmm...braaaaiiiinnsss....\n");
     printf("\n");
-    printf("%s to you!\nWelcome to Zombie Dice!\n", __func__);
+    printf(TEXTGREEN"%s to you!\nWelcome to Zombie Dice!\n"TEXTRESET, __func__);
     printf("it's been %d seconds, %d minutes, %d hours, %d days since your last game!\n", seconds, minutes, hours, days);
 }
 
