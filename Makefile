@@ -1,8 +1,8 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -g -I.
 TARGET = zdice
-SRC = main.c game.c gamerunner.c random.c cup.c players.c
-DEBUG_SRC = main.c game.c gamerunner.c random.c cup.c players.c tests.c
+SRC = main.c game.c game_runner.c random.c cup.c players.c
+DEBUG_SRC = main.c game.c game_runner.c random.c cup.c players.c tests.c
 BUILD_DIR = obj
 OBJ = $(SRC:%.c=$(BUILD_DIR)/%.o)
 DEBUG_OBJ = $(DEBUG_SRC:%.c=$(BUILD_DIR)/%.o)
